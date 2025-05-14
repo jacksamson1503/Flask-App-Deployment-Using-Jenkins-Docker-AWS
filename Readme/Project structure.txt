@@ -1,0 +1,27 @@
+
+---
+
+How It Works
+
+1. Create Flask App
+A basic web server using Flask that returns a greeting.
+
+2. Dockerize It
+The Dockerfile installs Python, Flask, and sets up the app to run on port 5000.
+
+3. Push to GitHub
+Code is pushed to GitHub where Jenkins will fetch it.
+
+4. Setup Jenkins Pipeline
+Jenkins pipeline is defined in `Jenkinsfile`. It:
+- Clones the repo
+- Builds the Docker image
+- Runs the container
+
+5. Host on AWS EC2
+Jenkins and Docker run on an Ubuntu EC2 instance.
+
+
+Final Output
+After running the Jenkins job, open:
+
